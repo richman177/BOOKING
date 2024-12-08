@@ -100,3 +100,25 @@ class Review(models.Model):
 
     def __str__(self):
         return f'{self.user}, {self.hotel}'
+
+class Room(models.Model):
+    number = models.CharField(max_length=10)
+    status = models.CharField(max_length=50, choices=[
+        ('available', 'Available'),
+        ('booked', 'Booked'),
+        ('out_of_service', 'Out of Service')])
+
+class Booking(models.Model):
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    check_in = models.DateTimeField()
+    check_out = models.DateTimeField()
+    status = models.CharField(max_length=50, choices=[
+        ('booked', 'Booked'),
+        ('canceled', 'Canceled'),
+        ('completed', 'Completed')])
+    created_at = models.DateTimeField(auto_now_add=True)
+    canceled_at = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f"Booking {self.id} by {self.user.username}"
