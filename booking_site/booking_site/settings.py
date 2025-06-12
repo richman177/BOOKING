@@ -129,7 +129,7 @@ LANGUAGES = (
 )
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 
-MODELTRANSLATION_LANGUAGES = ('en', 'ru')
+MODELTRANSLATION_LANGUAGES = ('en', 'ru')     
 
 
 # Static files (CSS, JavaScript, Images)
