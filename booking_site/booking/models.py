@@ -5,7 +5,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.core.validators import MinValueValidator, MaxValueValidator 
 
 
-
+ 
 class UserProfile(AbstractUser):
     STATUS_CHOICES = (
         ('client', 'client'),
