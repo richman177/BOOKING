@@ -14,7 +14,7 @@ class UserProfile(AbstractUser):
     age = models.PositiveSmallIntegerField(default=0, null=True, blank=True,
                                            validators=[MinValueValidator(15), 
                                                        MaxValueValidator(110)])
-    phone_number = PhoneNumberField(null=True, blank=True, region='KG')
+    phone_number = PhoneNumberField(null=True, blank=True, region='KG') 
     status = models.CharField(max_length=32, choices=STATUS_CHOICES, default = 'client')
 
     def __str__(self):
