@@ -38,7 +38,7 @@ class Hotel(models.Model):
         return f'{self.hotel_name} , {self.country} , {self.city}'
 
     def get_average_rating(self):
-        ratings = self.review.all()
+        ratings = self.review.all() 
         if ratings.exists():
             return (round(sum(rating.stars for rating in ratings) / ratings.count(), 1))
         return 0
