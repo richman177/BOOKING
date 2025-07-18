@@ -15,7 +15,7 @@ class UserProfile(AbstractUser):
                                            validators=[MinValueValidator(15), 
                                                        MaxValueValidator(110)])
     phone_number = PhoneNumberField(null=True, blank=True, region='KG') 
-    status = models.CharField(max_length=32, choices=STATUS_CHOICES, default = 'client')
+    status = models.CharField(max_length=32, choices=STATUS_CHOICES, default = 'client') 
 
     def __str__(self):
         return f'{self.first_name}' 
