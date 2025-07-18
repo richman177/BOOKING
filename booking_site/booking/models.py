@@ -117,7 +117,7 @@ class Booking(models.Model):
         ('booked', 'Booked'),
         ('canceled', 'Canceled'),
         ('completed', 'Completed')])
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True) 
     canceled_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
