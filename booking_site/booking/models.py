@@ -18,7 +18,7 @@ class UserProfile(AbstractUser):
     status = models.CharField(max_length=32, choices=STATUS_CHOICES, default = 'client') 
 
     def __str__(self):
-        return f'{self.first_name}' 
+        return f'{self.first_name}'  
 
 
 class Hotel(models.Model):
