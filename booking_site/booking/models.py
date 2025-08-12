@@ -21,7 +21,7 @@ class UserProfile(AbstractUser):
         return f'{self.first_name}'  
 
 
-class Hotel(models.Model):
+class Hotel(models.Model): 
     hotel_name = models.CharField(max_length=60) 
     country = models.CharField(max_length=30)
     city = models.CharField(max_length=30)
