@@ -9,7 +9,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 class UserProfile(AbstractUser): 
     STATUS_CHOICES = (
         ('client', 'client'),
-        ('owner', 'owner'),
+        ('owner', 'owner'), 
     )
     age = models.PositiveSmallIntegerField(default=0, null=True, blank=True,
                                            validators=[MinValueValidator(15), 
